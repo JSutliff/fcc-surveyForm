@@ -9,52 +9,83 @@
 </head>
 
 <body>
-  <h1 id="title">Responsive Design Projects - Survey Form</h1>
-  <p id="description">Let us know how we can improve</p>
-  <div id="formContainer">
-    <form action="" id="survey-form">
-      <label for="name" id="name-label">Name:</label>
-      <input type="text" id="name" placeholder="Enter your name">
-      <br>
-      <br>
-      <label for="email" id="email-label">Email:</label>
-      <input type="email" id="email" placeholder="Enter your email">
-      <br>
-      <br>
-      <label for="age" id="age-label">Age:</label>
-      <input type="number" min="1" max="120" id="age">
-      <br>
-      <br>
-      <label for="currentRole">Which option best describes your choice of music?</label>
-      <select name="music" id="dropdown">
-        <option disabled value>Select an option</option>
-        <option value="Jerry Garcia Band">Jerry Garcia Band</option>
-        <option value="Grateful Dead">Grateful Dead</option>
-      </select>
-      <br>
-      <br>
-      <label for="recomendation">How likely are you to recomend jam bands to a friend?</label>
-      <div>
-          <input type="radio" id="definitely"
-                 name="drone" value="definitely" />
-          <label for="definitely">Definitely</label>
-      </div>
+  <div class="container">
+    <h1 id="title">Responsive Design Projects - Survey Form</h1>
+    <div class="wrapper">
+      <p id="description">If you're not a head you're behind</p>
+    </div>
+    <div class="contact">
+      <h3>Answer a brief survey</h3>
+      <form id="survey-form">
+        <!-- Name -->
+        <p>
+          <label for="name" id="name-label">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </p>
 
-      <div>
-          <input type="radio" id="maybe"
-                 name="drone" value="maybe" />
-          <label for="maybe">Maybe</label>
-      </div>
+        <!-- Email -->
+        <p>
+          <label for="email" id="email-label">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </p>
 
-      <div>
-          <input type="radio" id="notSure"
-                 name="drone" value="notSure" />
-          <label for="notSure">Not Sure</label>
-      </div>
-    </form>
+        <!-- Have seen Jerry? -->
+        <p>
+          <label for="age" id="number-label">How many times did you see Jerry:</label>
+          <input type="number" min="0" max="120" id="number" placeholder="100">
+        </p>
+
+        <!-- Music Choice -->
+        <p>
+          <label for="currentRole">Which option best describes your choice of music?</label>
+          <select name="music" id="dropdown">
+            <option disabled value>Select an option</option>
+            <option value="Jerry Garcia Band">Jerry Garcia Band</option>
+            <option value="Grateful Dead">Grateful Dead</option>
+          </select>
+        </p>
+
+        <!-- Recomend -->
+        <p>
+          <label for="recomendation">How likely are you to recomend jam bands to a friend?</label>
+          <div>
+            <input type="radio" id="definitely" name="drone" value="definitely" />
+            <label for="definitely">Definitely</label>
+          </div>
+          <div>
+            <input type="radio" id="maybe" name="drone" value="maybe" />
+            <label for="maybe">Maybe</label>
+          </div>
+
+          <div>
+            <input type="radio" id="notSure" name="drone" value="notSure" />
+            <label for="notSure">Not Sure</label>
+          </div>
+        </p>
+        
+        <!-- Things enjoyed -->
+        <p>
+            <label for="thingsEnjoyed">What are some things you like about The Grateful Dead (check all that apply):</label><br>
+            <input type="checkbox" name="space" value="space"> Getting spun during space<br>
+            <input type="checkbox" name="drums" value="drums"> Watching Mickey lick the beam during drums<br>
+            <input type="checkbox" name="coldFatties" value="coldFatties"> Ice cold fatties on the lot<br>
+        </p>
+
+        <!-- Comments -->
+        <p>
+          <label for="comments">Comments, Questions, Concerns</label>
+          <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        </p>
+
+        <!-- Submit Button -->
+        <button id="submit">Submit</button>
+      </form>
+    </div>
   </div>
+
+
 </body>
-<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
-</script> -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+</script>
 
 </html>
